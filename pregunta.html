@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>¿Eres Oscurita :3?</title>
+</head>
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+        background-color: #fde0dc;
+        overflow-x: hidden;
+    }
+
+    .container {
+        max-width: 800px;
+        margin: 0 auto;
+        text-align: center;
+        padding-top: 100px;
+    }
+
+    .hearts-bg {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: url('hearts-bg.jpg') repeat;
+        z-index: -1;
+    }
+
+    h1 {
+        color: #ffffff;
+    }
+
+    .buttons {
+        margin-top: 50px;
+    }
+
+    button {
+        font-size: 18px;
+        padding: 10px 20px;
+        margin: 0 10px;
+        background-color: #ff6b6b;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    button:focus {
+        outline: none;
+    }
+
+    .result {
+        display: none;
+        margin-top: 50px;
+        text-align: center;
+    }
+
+    .result img {
+        max-width: 50%;
+        height: auto;
+    }
+
+    @media (max-width: 768px) {
+        .container {
+            max-width: 90%; 
+        }
+    }
+</style>
+<body>
+    <div class="container">
+        <h1>¿Eres Oscurita :3?</h1>
+        <div class="hearts-bg"></div>
+        <div class="buttons">
+            <button id="si-btn">Sí</button>
+            <button id="no-btn">No</button>
+        </div>
+    </div>
+
+    <div id="result" class="result"></div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            document.getElementById('si-btn').addEventListener('click', function() {
+                document.getElementById('result').innerHTML = '<div class="hearts-bg"></div><img src="oscurita.png"><h1>Qué bueno que te aceptas :3</h1>';
+                document.getElementById('result').style.display = 'block';
+                document.querySelector('.container').style.display = 'none';
+            });
+
+            document.getElementById('no-btn').addEventListener('click', function() {
+                var siBtn = document.getElementById('si-btn');
+                
+                var currentFontSize = parseFloat(window.getComputedStyle(siBtn, null).getPropertyValue('font-size'));
+                var currentPadding = window.getComputedStyle(siBtn, null).getPropertyValue('padding');
+                
+                var newFontSize = currentFontSize * 1.5;
+                var newPadding = currentPadding.split(' ').map(function(padding) {
+                    return parseFloat(padding) * 1.5 + 'px';
+                }).join(' ');
+                
+                siBtn.style.fontSize = newFontSize + 'px';
+                siBtn.style.padding = newPadding;
+            });
+        });
+    </script>
+</body>
+</html>
