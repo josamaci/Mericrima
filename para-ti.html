@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tulipanes para Linni</title>
+    <style>
+        body {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            background: url('https://marketplace.canva.com/EAFOGVknDeU/1/0/900w/canva-pastel-watercolor-pink-heart-mobile-wallpaper-XrR_DqakPpM.jpg') repeat;
+            font-family: Arial, sans-serif;
+          }
+          
+          #container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin-top: 30%;
+          }
+          
+          #dinosaur {
+            margin-bottom: 20px;
+          }
+
+          #dinosaur  img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        #tulipanes  img {
+            max-width: 100%;
+            height: auto;
+        }
+          
+          #tulipanes {
+            display: flex;
+            margin-bottom: 20px;
+          }
+          
+          #mensaje {
+            font-size: 40px;
+            font-weight: bold;
+          }     
+    </style>       
+</head>
+<body>
+    <div id="container">
+        <div id="dinosaur">
+          <img src="https://i.pinimg.com/originals/e2/55/fc/e255fc70c8fd6901154fa4b90c896af8.gif" alt="Dinosaurio" width="480">
+        </div>
+        <div id="mensaje">
+            <p>Fuerza, Dinosauria</p>
+          </div>
+        <div id="tulipanes">
+          <img src="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExZjlyZDJ6YXA4bW9vZG4yMHQ2MXZxcWx6MjF5cmU2dHF3cmJpcndtMiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/gj0rsRjpHohNHMp4bR/giphy.gif" alt="Tulipán rosa">
+        </div>
+      </div>
+    <script>let mensaje = document.getElementById('mensaje');
+        setInterval(function() {
+            mensaje.style.visibility = (mensaje.style.visibility == 'visible' ? 'hidden' : 'visible');
+        }, 1000);</script>
+</body>
+</html>
