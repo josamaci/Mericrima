@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Felicitaciones</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            flex-direction: column;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            /* Fondo del collage de fotos */
+            background-image: url('./assets/img/collage.png'); /* Ruta de la imagen del collage */
+            background-size: cover; /* Para que la imagen cubra todo el fondo */
+            background-position: center; /* Centrar la imagen */
+            background-repeat: no-repeat; /* No repetir la imagen */
+            background-attachment: fixed; /* Fijar el fondo para que no se desplace con el contenido */
+        }
+        
+        .container {
+            max-width: 600px;
+            height: 100%;
+            margin: 0 auto;
+            background-color: rgba(255, 255, 255, 0.5); /* Fondo semitransparente para mejorar la legibilidad */
+            padding: 20px;
+            border-radius: 10px;
+            display: flex;
+            flex-direction: column;
+            align-content: center;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        h1 {
+            margin: 20px 0;
+            font-size: 2em;
+            color: #ff69b4;
+        }
+        
+        p {
+            font-size: 1.25em;
+            color: #000000;
+            font-weight: 600;
+        }
+
+        #playButton {
+            background-color: #ff69b4;
+            color: white;
+            padding: 10px 20px;
+            font-size: 1em;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            margin: 5%;
+        }
+
+        #playButton:hover {
+            background-color: #e6399b;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>¡Muchas Felicidades por tu CUM, Dinosauria!</h1>
+        <p>Ahora en serio, felicidades por tu cumpleaños, espero de todo corazón que lo pases bien y que nos sigamos llevando bien durante más tiempo. 
+            Sé que normalemente parece que todo lo digo en broma, y en parte es así, pero cuando te digo que me caes bien o eres increíble es verdad para mí.
+            Sé que a veces las cosas se ponen difíciles y si necesitas ayuda o si solo necesitas que alguien te escuche puedes hablar conmigo.
+            Eres una una persona especial para mí. Se te quiere, número 2. Atentamente, El Negro José </p>
+
+        <audio id="backgroundMusic" loop>
+            <source src="./assets/mp3/dieforyou.mp3" type="audio/mpeg">
+        </audio>
+
+        <button id="playButton">Reproducir música</button>
+    </div>
+
+    <script>
+
+        document.getElementById('playButton').addEventListener('click', function() {
+            const backgroundMusic = document.getElementById('backgroundMusic');
+            backgroundMusic.play(); 
+        });
+
+    </script>
+</body>
+</html>
