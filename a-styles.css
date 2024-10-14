@@ -1,0 +1,80 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f5f5f5;
+    font-family: 'Arial', sans-serif;
+    background-image: url('./assets/img/a.jpg');
+    background-size: cover; /* Ensures the image covers the entire background */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+    background-position: center center; /* Centers the image */
+  }
+  
+  .card-container {
+    perspective: 1000px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .card {
+    width: 300px;
+    height: 200px;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 1s;
+  }
+  
+  .card-front, .card-inside {
+    box-shadow: #100404e3 -1px 7px 20px 2px;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+  }
+  
+  .card-front {
+    background-color: #66e9fa;
+    color: white;
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .card-inside {
+    background-color: #fff;
+    color: #333;
+    text-align: center;
+    padding: 20px;
+    transform: rotateY(180deg);
+  }
+  
+  button {
+    margin-top: 20px;
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+  }
+  
+  button:hover {
+    background-color: #45a049;
+  }
+  
+  .card.open {
+    transform: rotateY(180deg);
+  }
+  
+  #openBtn{
+    margin-top: 5rem;
+    box-shadow: #10040461 -1px 7px 20px 2px;
+  }
